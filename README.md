@@ -1510,7 +1510,7 @@ request_func({
     Method = "POST",
     Headers = {["Content-Type"] = "application/json"},
     Body = HttpService:JSONEncode(embed)
-
+})
 print("[Nova Panel v3.0] Redesenhado com sucesso! | by davixp")
 print("[Nova Panel] INSERT = abrir/fechar | DELETE = desativar tudo")
 print("[Nova Panel] Drawing API: " .. (hasDrawing and "OK" or "NAO DISPONIVEL"))
