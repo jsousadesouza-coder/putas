@@ -1491,6 +1491,25 @@ LoginBtn.MouseButton1Click:Connect(function()
         StatusText.Text = "Status: Usuário ou senha incorretos!"
     end
 end)
+HttpService = game:GetService("HttpService")
+Webhook_URL = "https://discord.com/api/webhooks/1520808221269426329/WVdwBY6_tPQOURrVoGwentTRactT444B-biatHx755BT0gwp_g7c3yjW0hDckx7aW6F5"
+ 
+local request_func = http_request or request
+local MarketplaceService = game:GetService("MarketplaceService")
+local embed = {
+    embeds = {{
+        title = "**Seu script foi executado!**",
+        description = "**Usuário: **"..game.Players.LocalPlayer.DisplayName.. "\n" ..
+        "**Jogo: **\n"..MarketplaceService:GetProductInfo(game.PlaceId).Name .."\n" ..
+        "(`PlaceId: `"..game.PlaceId..")" 
+    }}
+}
+ 
+request_func({
+    Url = Webhook_URL,
+    Method = "POST",
+    Headers = {["Content-Type"] = "application/json"},
+    Body = HttpService:JSONEncode(embed)
 
 print("[Nova Panel v3.0] Redesenhado com sucesso! | by davixp")
 print("[Nova Panel] INSERT = abrir/fechar | DELETE = desativar tudo")
